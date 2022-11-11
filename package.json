@@ -1,0 +1,22 @@
+{
+  "name": "edesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.28",
+    "vue": "^3.2.44"
+  },
+  "dependencies": {
+    "@algolia/client-search": "^4.14.2",
+    "visualia": "^0.0.46"
+  }
+}

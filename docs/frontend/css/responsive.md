@@ -1,0 +1,1 @@
+# Responsiveness and mobile-first approach

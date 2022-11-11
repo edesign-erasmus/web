@@ -1,0 +1,11 @@
+# What is e-design
+
+The project aims to increase the chances of labour market integration for people with disabilities and health restrictions by developing an e-learning curriculum in the field of multimedia design (interactive graphics). Media design is an industry in demand on the labour market and should remain so in the coming years. In addition, there is a great need for development in Europe with regard to digital training. For people with mobility disabilities or other health restrictions, participation in training courses is usually more difficult to manage. Therefore especially this target group should benefit from e-learning, as the contents can be learned at home or at other places. The learners thus receive a high-quality training that can be implemented on the labour market without having to be constantly mobile.
+
+According to the objectives of the project, the contents of the curriculum “e-design” will be defined first. In a further step the e-learning modules for the theoretical training will be developed. Afterwards, selected participants will be given the opportunity to learn the developed contents in the context of pilot projects in the 3 project partner countries – Estonia, Germany and Austria.
+
+Target group are people for whom a daily training visit is not possible or represents an additional burden. After this phase, internships can be completed in companies, which deepen the theoretically learned contents. These internships should also take the form of teleworking if required.
+
+The project duration is 2.5 years. In addition to improving access to employment, the project should also increase the motivation and self-confidence of people with disabilities or health restrictions. The new digital education methodology offers the possibility to learn independent of location and also independent of time. It will thus benefit many target groups (parents with care responsibilities, people with mental disabilities, etc.).
+
+The project has the same importance at local, regional and intergovernmental level. There is no difference in which country learners or teachers are located – this teaching, which takes into account the target groups, is possible everywhere and in every country. Cross-border education should become international education without borders.
