@@ -1,84 +1,194 @@
+import enThemeConfig from './theme/en';
+import etThemeConfig from "./theme/et";
+
 export default {
-    title: "Interactive Graphics | Erasmus E-Design",
-    description: "Study materials for the course",
-    themeConfig: {
-        siteTitle: 'Interactive Graphics | Erasmus E-Design',
-        logo: './edesign-logo--mono.svg',
+  title: "Interactive Graphics | Erasmus E-Design",
+  description: "Study materials for the course",
+  locales: {
+    root: {
+      label: "English",
+      lang: "en",
+      themeConfig: {
+        enThemeConfig,
         nav: [
-            { text: 'About', link: '/about/'},
+          { text: "About", link: "/about/" },
+          {
+            text: "Course materials",
+            items: [
+              {
+                text: "Introduction",
+                link: "/intro/",
+                activeMatch: "^/intro/",
+              },
+              { text: "Design", link: "/design/", activeMatch: "^/design/" },
+              {
+                text: "Front End",
+                link: "/frontend/",
+                activeMatch: "^/frontend/",
+              },
+              {
+                text: "Graphics",
+                link: "/graphics/",
+                activeMatch: "^/graphics/",
+              },
+              { text: "3D", link: "/3d/", activeMatch: "^/3d/" },
+            ],
+          },
+        ],
+        sidebar: {
+          "/intro/": getIntroSidebar(),
+          "/design/": getDesignSidebar(),
+          "/frontend/": getFrontEndSidebar(),
+          "/graphics/": getGraphicsSidebar(),
+          "/3d/": get3dSidebar(),
+          "/about/": [
             {
-                text: 'Course materials',
-                items: [
-                    { text: "Introduction", link: "/intro/", activeMatch: "^/intro/" },
-                    { text: "Design", link: "/design/", activeMatch: "^/design/" },
-                    { text: "Front End", link: "/frontend/", activeMatch: "^/frontend/" },
-                    { text: "Graphics", link: "/graphics/", activeMatch: "^/graphics/" },
-                    { text: "3D", link: "/3d/", activeMatch: "^/3d/" },
-                ]
+              text: "",
+              items: [
+                { text: "Erasmus+ project 'E-design'", link: "/about/" },
+                {
+                  text: "What is e-design",
+                  link: "/about/what-is-edesign",
+                },
+                { text: "Our project partners", link: "/about/partners" },
+                { text: "Gallery", link: "/about/galery" },
+                {
+                  text: "The guidelines for the E-design project  ",
+                  link: "/about/guidlines",
+                },
+                {
+                  text: "Competence profile 'E-Designer'",
+                  link: "/about/compentence",
+                },
+                { text: "Modules and courses", link: "/about/courses" },
+                {
+                  text: "Guildline for Moodle",
+                  link: "/about/moodleGuidelines",
+                },
+              ],
             },
           ],
-          sidebar: {
-            '/intro/' : getIntroSidebar(),
-            "/design/": getDesignSidebar(),
-            "/frontend/": getFrontEndSidebar(),
-            "/graphics/": getGraphicsSidebar(),
-            "/3d/": get3dSidebar(),
-            "/about/" : [
+        },
+      },
+    },
+    et: {
+      label: "Eesti",
+      lang: "et",
+      themeConfig: {
+        etThemeConfig,
+        nav: [
+          { text: "Erasmus+ projekt 'E-disain'", link: "et/about/" },
+          {
+            text: "Course materials",
+            items: [
+              {
+                text: "Introduction",
+                link: "/intro/",
+                activeMatch: "^/intro/",
+              },
+              { text: "Design", link: "/design/", activeMatch: "^/design/" },
+              {
+                text: "Front End",
+                link: "/frontend/",
+                activeMatch: "^/frontend/",
+              },
+              {
+                text: "Graphics",
+                link: "/graphics/",
+                activeMatch: "^/graphics/",
+              },
+              { text: "3D", link: "/3d/", activeMatch: "^/3d/" },
+            ],
+          },
+        ],
+        sidebar: {
+          "/intro/": getIntroSidebar(),
+          "/design/": getDesignSidebar(),
+          "/frontend/": getFrontEndSidebar(),
+          "/graphics/": getGraphicsSidebar(),
+          "/3d/": get3dSidebar(),
+          "et/about/": [
+            {
+              text: "",
+              items: [
+                { text: "Tutvustus", link: "et/about/" },
                 {
-                    text: '',
-                    items: [
-                        { text: 'About this project', link: '/about/' },
-                        { text: 'What is e-design', link: '/about/what-is-edesign' },
-                        { text: 'Our project partners', link: '/about/partners' }
-                    ]
-                }
-            ]
-          }
-      }
-}
+                  text: "Mis on e-disain",
+                  link: "et/about/what-is-edesign",
+                },
+                { text: "Projektipartnerid", link: "et/about/partners" },
+                { text: "Galerii", link: "et/about/galery" },
+                {
+                  text: "Projekti 'Digikujundus' suunised",
+                  link: "et/about/guidlines",
+                },
+                {
+                  text: "Digikujundaja pädevuse kirjeldus",
+                  link: "et/about/compentence",
+                },
+                { text: "Moodulid ja kursused", link: "et/about/courses" },
+                {
+                  text: "Juhend moodle kasutamiseks",
+                  link: "et/about/moodleGuildines",
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+};
 
 function getIntroSidebar() {
-	return [
-		{
-			text: 'The Introduction',
-			items: [
-                { text: 'Before we start', link: '/intro/' },
-				{ text: 'What is Interactive Graphics?', link: '/intro/intro/what' },
-				{ text: 'History of IG', link: '/intro/intro/history' }
-			]
-		},
-		{
-			text: 'The Process',
-			items: [
-				{ text: 'Project management', link: '/intro/project/project-management' },
-				{ text: 'Setting up the project', link: '/intro/project/setup' },
-				{ text: 'Design process', link: '/intro/project/design-process' },
-			]
-		},
-		{
-			text: 'The Ergonomics',
-			items: [
-				{ text: 'Health risks and how to avoid them', link: '/intro/ergonomics/health-risks' },
-			]
-		},
-		{
-			text: 'The Community',
-			items: [
-				{ text: 'Inspiration, know-how, communication', link: '/intro/community/inspiration' },
-				{ text: 'Tools', link: '/intro/community/tools' },
-				{ text: 'Resources', link: '/intro/community/resources' },
-			]
-		},
-	]
+  return [
+    {
+      text: "The Introduction",
+      items: [
+        { text: "Before we start", link: "/intro/" },
+        { text: "What is Interactive Graphics?", link: "/intro/intro/what" },
+        { text: "History of IG", link: "/intro/intro/history" },
+      ],
+    },
+    {
+      text: "The Process",
+      items: [
+        {
+          text: "Project management",
+          link: "/intro/project/project-management",
+        },
+        { text: "Setting up the project", link: "/intro/project/setup" },
+        { text: "Design process", link: "/intro/project/design-process" },
+      ],
+    },
+    {
+      text: "The Ergonomics",
+      items: [
+        {
+          text: "Health risks and how to avoid them",
+          link: "/intro/ergonomics/health-risks",
+        },
+      ],
+    },
+    {
+      text: "The Community",
+      items: [
+        {
+          text: "Inspiration, know-how, communication",
+          link: "/intro/community/inspiration",
+        },
+        { text: "Tools", link: "/intro/community/tools" },
+        { text: "Resources", link: "/intro/community/resources" },
+      ],
+    },
+  ];
 }
 
 function getFrontEndSidebar() {
-	return [
+  return [
     {
-        text: "Introduction",
-        items: [
-            { text: "Front-end", link: "/frontend/" },
-        ]
+      text: "Introduction",
+      items: [{ text: "Front-end", link: "/frontend/" }],
     },
     {
       text: "Tooling",
@@ -86,7 +196,10 @@ function getFrontEndSidebar() {
         { text: "Command Line Interface", link: "/frontend/tooling/cli" },
         { text: "IDE-s", link: "/frontend/tooling/ide" },
         { text: "Versioning", link: "/frontend/tooling/versioning" },
-        { text: "Project managing", link: "/frontend/tooling/project-management" },
+        {
+          text: "Project managing",
+          link: "/frontend/tooling/project-management",
+        },
         { text: "Debuging tools", link: "/frontend/tooling/debugging" },
       ],
     },
@@ -104,10 +217,16 @@ function getFrontEndSidebar() {
       items: [
         { text: "Syntax", link: "/frontend/css/syntax" },
         { text: "Layout", link: "/frontend/css/layout" },
-        { text: "Responsiveness / mobile-first", link: "/frontend/css/responsive" },
+        {
+          text: "Responsiveness / mobile-first",
+          link: "/frontend/css/responsive",
+        },
         { text: "Units", link: "/frontend/css/units" },
         { text: "Designing in CSS", link: "/frontend/css/design" },
-        { text: "Transitions and animations", link: "/frontend/css/transitions" },
+        {
+          text: "Transitions and animations",
+          link: "/frontend/css/transitions",
+        },
         { text: "Frameworks", link: "/frontend/css/frameworks" },
       ],
     },
@@ -120,16 +239,14 @@ function getFrontEndSidebar() {
         { text: "Frameworks", link: "/frontend/js/frameworks" },
       ],
     },
-	];
+  ];
 }
 
 function getDesignSidebar() {
   return [
     {
-        text: 'Introduction',
-        items: [
-            { text: "UI/UX design and prototyping", link: "/design/" },
-        ]
+      text: "Introduction",
+      items: [{ text: "UI/UX design and prototyping", link: "/design/" }],
     },
     {
       text: "Usability and accessibility",
@@ -146,7 +263,10 @@ function getDesignSidebar() {
       items: [
         { text: "Design patterns", link: "/design/composition/patterns" },
         { text: "Layout / grid", link: "/design/composition/layout" },
-        { text: "UI design principles", link: "/design/composition/principles" },
+        {
+          text: "UI design principles",
+          link: "/design/composition/principles",
+        },
       ],
     },
     {
@@ -164,7 +284,10 @@ function getDesignSidebar() {
         { text: "Pen and paper", link: "/design/prototype/paper" },
         { text: "Prototypes", link: "/design/prototype/prototyping" },
         { text: "Software", link: "/design/prototype/software" },
-        { text: "Interaction principles", link: "/design/prototype/interaction" },
+        {
+          text: "Interaction principles",
+          link: "/design/prototype/interaction",
+        },
       ],
     },
   ];
@@ -173,28 +296,40 @@ function getDesignSidebar() {
 function getGraphicsSidebar() {
   return [
     {
-        text: 'Introduction',
-        items: [
-            { text: "Creating graphic assets", link: "/graphics/" },
-        ]
+      text: "Introduction",
+      items: [{ text: "Creating graphic assets", link: "/graphics/" }],
     },
     {
       text: "Vector- and raster graphics",
       items: [
         { text: "File formats", link: "/graphics/vector-pixel/file-formats" },
-        { text: "Using images in web", link: "/graphics/vector-pixel/using-images" },
+        {
+          text: "Using images in web",
+          link: "/graphics/vector-pixel/using-images",
+        },
       ],
     },
     {
       text: "Illustration",
       items: [
-        { text: "Web illustration", link: "/graphics/illustration/web-illustration" },
-        { text: "Pictography and icons", link: "/graphics/illustration/pictography" },
+        {
+          text: "Web illustration",
+          link: "/graphics/illustration/web-illustration",
+        },
+        {
+          text: "Pictography and icons",
+          link: "/graphics/illustration/pictography",
+        },
       ],
     },
     {
       text: "Infographics",
-      items: [{ text: "Working with data", link: "/graphics/infographics/working-with-data" }],
+      items: [
+        {
+          text: "Working with data",
+          link: "/graphics/infographics/working-with-data",
+        },
+      ],
     },
   ];
 }
@@ -202,10 +337,8 @@ function getGraphicsSidebar() {
 function get3dSidebar() {
   return [
     {
-        text: 'Introduction',
-        items: [
-            { text: "3D graphics", link: "/3d/" },
-        ]
+      text: "Introduction",
+      items: [{ text: "3D graphics", link: "/3d/" }],
     },
     {
       text: "Introduction to 3D-graphics",
@@ -225,8 +358,8 @@ function get3dSidebar() {
         { text: "lighting", link: "/3d/blender/lighting" },
         { text: "camera", link: "/3d/blender/camera" },
         { text: "rendering", link: "/3d/blender/rendering" },
-        { text: "animation", link: "/3d/blender/animation"},
-        { text: "simulations", link: "/3d/blender/simulations"},
+        { text: "animation", link: "/3d/blender/animation" },
+        { text: "simulations", link: "/3d/blender/simulations" },
       ],
     },
   ];
